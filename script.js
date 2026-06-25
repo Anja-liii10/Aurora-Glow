@@ -1,72 +1,73 @@
-// const cursor = document.getElementById("cursor");
-// const select = document.getElementById("cursorSelect");
+const cursor = document.getElementById("cursor");
+const select = document.getElementById("cursorSelect");
 
-// let mouseX = 0;
-// let mouseY = 0;
+let mouseX = 0;
+let mouseY = 0;
 
-// let currentX = 0;
-// let currentY = 0;
+let currentX = 0;
+let currentY = 0;
 
-// document.addEventListener("mousemove",(e)=>{
+document.addEventListener("mousemove",(e)=>{
 
-//     mouseX = e.clientX;
-//     mouseY = e.clientY;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
 
-// });
+});
 
-// function animate(){
+function animate(){
 
-//     currentX += (mouseX-currentX)*0.15;
-//     currentY += (mouseY-currentY)*0.15;
+    currentX += (mouseX-currentX)*0.15;
+    currentY += (mouseY-currentY)*0.15;
 
-//     cursor.style.left = currentX + "px";
-//     cursor.style.top = currentY + "px";
+    cursor.style.left = currentX + "px";
+    cursor.style.top = currentY + "px";
 
-//     requestAnimationFrame(animate);
-// }
+    requestAnimationFrame(animate);
+}
 
-// animate();
+animate();
 
-// select.addEventListener("change",()=>{
 
-//     let color = select.value;
 
-//     cursor.style.background = color;
+select.addEventListener("change",()=>{
 
-//     cursor.style.boxShadow =
-//     `0 0 15px ${color},
-//      0 0 30px ${color},
-//      0 0 60px ${color}`;
+    let color = select.value;
 
-// });
-// const cursorSelect = document.getElementById("cursorSelect");
+    // Change Cursor Color
+    cursor.style.background = color;
 
-// cursorSelect.addEventListener("change", () => {
+    cursor.style.boxShadow =
+    `0 0 15px ${color},
+     0 0 30px ${color},
+     0 0 60px ${color}`;
 
-//     let theme = cursorSelect.value;
+    // Change Background Theme
+    if(color === "yellow"){
 
-//     if(theme === "yellow"){
+        document.body.style.background =
+        "linear-gradient(120deg, #F8F75B 0%, #D7F96A 10%, #88D77A 25%,  #2ED3A2 45%,  #0E8FA8 65%,  #0B4F82 82%, #051B4D 100%)";
 
-//         document.body.style.background = Red;
-        
-//     }
+    }
 
-//     else if(theme === "cyan"){
+    else if(color === "cyan"){
 
-//         document.body.style.background =
-//         "linear-gradient(135deg,#0f172a,#1e293b,#111827)";
-//     }
+        document.body.style.background =
+        "linear-gradient(135deg,#0f172a,#1e293b,#111827)";
 
-//     else if(theme === "pink"){
+    }
 
-//         document.body.style.background =
-//         "linear-gradient(135deg,#2e1065,#4c1d95,#1e1b4b)";
-//     }
+    else if(color === "pink"){
 
-//     else if(theme === "green"){
+        document.body.style.background =
+        "linear-gradient(135deg,#2e1065,#4c1d95,#1e1b4b)";
 
-//         document.body.style.background =
-//         "linear-gradient(135deg,#c7d2fe,#3b82f6,#1e3a8a)";
-//     }
+    }
 
-// });
+    else if(color === "green"){
+
+        document.body.style.background =
+        "linear-gradient(135deg,#c7d2fe,#3b82f6,#1e3a8a)";
+
+    }
+
+});
