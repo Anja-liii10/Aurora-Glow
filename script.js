@@ -28,7 +28,8 @@ function animate(){
 animate();
 
 
-
+const spark = document.createElement("div");
+spark.classList.add("spark");
 select.addEventListener("change",()=>{
 
     let color = select.value;
@@ -50,24 +51,25 @@ select.addEventListener("change",()=>{
     }
 
     else if(color === "cyan"){
-
+        // document.body.style.background =
+        // "linear-gradient(135deg, #00142F 0%, #154559 15%, #0022FF 35%, #006FFC 55%, #00BBF9 75%, #00F5D4 92%, #1E1E1E 100%)";
+       
         document.body.style.background =
-        "linear-gradient(135deg,#0f172a,#1e293b,#111827)";
+        "linear-gradient(140deg, #00142F 0%, #0022FF 18%, #006FFC 40%, #00BBF9 65%, #00F5D4 88%, #1E1E1E 100%)";
 
     }
 
     else if(color === "pink"){
 
         document.body.style.background =
-        "linear-gradient(135deg,#2e1065,#4c1d95,#1e1b4b)";
+        "linear-gradient(135deg, #110A1C 0%, #2C1665 20%, #6A3D8F 40%, #9C748C 62%, #CCC0CB 82%, #A66FB6 100%)";
 
     }
 
     else if(color === "green"){
 
         document.body.style.background =
-        "linear-gradient(135deg,#c7d2fe,#3b82f6,#1e3a8a)";
-
+       "linear-gradient(135deg, #3B514C 0%, #4C733C 20%, #308F3D 45%, #B0D1BC 70%, #6E7E79 88%, #3B514C 100%)"; 
     }
 
 });
